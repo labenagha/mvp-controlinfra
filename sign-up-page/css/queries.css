@@ -1,0 +1,63 @@
+/* 1) Combine old 972px + 850px rules into ~970px */
+@media (max-width: 970px) {
+    /* --- from old 972px breakpoint --- */
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        font-size: 1.2rem; 
+    }
+
+    .logo__controlinfra {
+        width: 80%;
+    }
+
+    .logo__controlinfra__title__box {
+        padding: 0 4.5rem;
+    }
+
+    .logo__controlinfra__title {
+        font-size: 1.2rem;
+    }
+
+    /* --- from old 850px breakpoint --- */
+    .logo__controlinfra__title__box {
+        gap: 3.8rem;
+    }
+
+    .logo__feature__img {
+        gap: 2.5rem;
+    }
+}
+
+/* 2) Keep old 800px rules at ~800px */
+@media (max-width: 800px) {
+    .sign__up__btn1 {
+        padding: 1rem 1.2rem 1rem 1.2rem;
+    }
+
+    .sign__up__link1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* 3) Combine old 760px + 690px rules into ~760px */
+@media (max-width: 760px) {
+    /* --- from old 760px breakpoint --- */
+    .logo__controlinfra__title__box {
+        gap: 3rem;
+    }
+
+    .sign__up__btn1 {
+        padding: 1rem 1.2rem 1rem 1.2rem;
+    }
+
+    .sign__up__link1 {
+        font-size: 1.2rem;
+    }
+
+    /* --- from old 690px breakpoint ---
+       It's the exact same code as 760px, so no further changes needed.
+    */
+}
