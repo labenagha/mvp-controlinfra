@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #343434;
+    --tertiary-color: #a4e5d9;
+    --error-color: #ff0000;
+    --font-size-normal: 1.4rem;
+    --font-size-normal-meduim: 1.6rem;
+    --font-size-normal-large: 1.8rem;
+    --shadow-color: rgba(0, 0, 0, 0.65);
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.sign__up__page__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left__sign__up__page {
+    background-color: #000;
+    min-height: 100vh;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.658);
+}
+
+.logo__controlinfra {
+    width: 50%;
+    object-fit: cover;
+}
+
+.logo__controlinfra__title__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 6.5rem;
+}
+
+.logo__controlinfra__title {
+    font-size: var(--font-size-normal);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.8;
+    letter-spacing: -1px;
+}
+
+.logo__feature__img {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+    width: 50%;
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    border: 1px solid #425c57;
+    border-radius: 10px;
+    margin-bottom: 9.5rem;
+}
+
+.icon__lock {
+    width: 50%;
+    object-fit: cover;
+}
+
+.logo__controlinfra__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem 0 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign__up__box {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.sign__up__btn1 {
+    display: inline-block;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    text-align: center;
+    background-color: var(--tertiary-color);
+    border-radius: 1000px;
+    box-shadow: var(--shadow-color);
+}
+
+.sign__up__link1 {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.8;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+}
+
+.sign__up__btn2 {
+    display: inline-block;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    text-align: center;
+    border-radius: 1000px;
+    border: 2px solid #fff;
+}
+
+.sign__up__link2 {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: -1px;
+    border-color: #000;
+}
+
+.sign__up__btn1:hover,
+.sign__up__btn1:focus {
+    color: var(--primary-color);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.sign__up__btn2:hover,
+.sign__up__btn2:active {
+    background-color: #73a098;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.sign__up__btn2:link,
+.sign__up__btn2:visited {
+    background-color: #73a098;
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.sign__up__link2:hover,
+.sign__up__link2:active {
+    color: #fff;
+}
+
+
+/*################################# */
+/* Right side of the sign-up page */
+/*################################# */
+.right__sign__up__page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.right__sign__up__page h1 {
+    letter-spacing: -2.2px;
+    width: fit-content;
+    max-width: 50rem;
+    font-weight: 500;
+}
+
+.sign__in__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    padding: 1rem;
+    width: 60%;
+    background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+}
+
+.sign__up___icon {
+    width: 2.5rem;
+    object-fit: cover;
+    align-self: center;
+}
+
+.icon__text {
+    color: #fff;
+    font-size: var(--font-size-normal-meduim);
+    line-height: 1.5;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.sign__in__box:hover,
+.sign__in__box:focus,
+.sign__in__box:active {
+    cursor: pointer;
+}
+
+.margin__bottom {
+    margin-bottom: 0.5rem;
+}
+/* 
+.sign__up__with__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 60%;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form__group label {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+}
+
+.form__control {
+    font-size: 1.1rem;
+    font-weight: 200;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    border: 1px solid #a4e5d9;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.form__control:focus {
+    border: 2px dotted #000;
+    outline: none; 
+}
+
+.form__group > button {
+    display: inline-block;
+    padding: 0.8rem;
+    text-align: center;
+    background-color: #000;
+    border-radius: 1000px;
+    color: #fff;
+    margin-top: 1.2rem;
+    margin-bottom: 3rem;
+    border: none;
+    width: 30%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.form__submit {
+    font-size: var(--font-size-normal-meduim);
+    font-weight: 600;
+} */
+
+.signup__with__sso__link {
+    text-decoration: none;
+    font-size: var(--font-size-normal-meduim);
+    font-weight: 600;
+}
+

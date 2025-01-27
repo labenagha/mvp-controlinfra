@@ -1,0 +1,69 @@
+:root {
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+
+    .logo__controlinfra__title {
+        font-size: 1.4rem;
+    }
+
+    .logo__controlinfra__title__box {
+        gap: 5.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .logo__feature__img {
+        padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+    }
+}
+
+@media (max-width: 890px) {
+    .left__sign__up__page {
+        display: none;
+    }
+
+    .right__sign__up__page {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .sign__in__box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .right__sign__up__page h1 {
+        font-size: 2.6rem;
+        letter-spacing: -1px;
+        font-weight: 600;
+        padding: 2.5rem 0 2.5rem 0;
+    }
+
+    .sign__in__box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 320px) {
+    .right__sign__up__page h1 {
+        font-size: 1.9rem;
+        letter-spacing: -1px;
+        font-weight: 600;
+        padding: 2.5rem 0 2.5rem 0;
+        max-width: 40rem;
+    }
+
+    .sign__in__box {
+        width: 80%;
+    }
+}
