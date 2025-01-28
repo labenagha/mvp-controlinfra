@@ -39,6 +39,7 @@ body {
     align-items: center;
     min-height: 100vh;
     gap: 2rem;
+    width: 100%;
 }
 
 .left__sign__up__page {
@@ -94,7 +95,6 @@ body {
     animation: borderFlow 4s linear infinite;
 }
 
-/* Add a white (or your background color) inner area */
 .logo__feature__img::after {
     content: '';
     position: absolute;
@@ -103,13 +103,11 @@ body {
     z-index: 0;
 }
 
-/* Make sure the content stays above the animated border */
 .logo__feature__img > img {
     position: relative;
     z-index: 1;
 }
 
-/* Animation keyframes */
 @keyframes borderFlow {
     0% { background-position: 200% 0; }
     100% { background-position: 0 0; }
@@ -238,7 +236,7 @@ body {
     letter-spacing: -0.5px;
     width: fit-content;
     max-width: 50rem;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 2.2rem;
 }
 
@@ -293,27 +291,23 @@ body {
 .signup__with__sso__link {
     text-decoration: none;
     font-size: var(--font-size-normal-meduim);
-    font-weight: 700;
-    color: #333;
-    font-size: 1.6rem;
+    font-weight: 600;
+    font-size: 1.4rem;
     color: #fff;
+    letter-spacing: -0.5px;
 }
 
 .term__policy__text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    color: #333;
-    line-height: 1.8;
+    color: #333333be;
     letter-spacing: -0.5px;
 }
 
 .term__policy__text a {
-    text-decoration: none;
-    font-weight: 500;
+    text-decoration: underline;
 }
 
 .term__policy__text a:hover {
-    color: var(--tertiary-color);
-    font-weight: 600;
     transition: all 0.3s;
 }
