@@ -32,12 +32,19 @@
         overflow: visible;
     }
 
+    main {
+        padding: 0;
+        margin: 0;
+    }
+
     .logo__controlinfra {
         width: 100%;
     }
 
     .sign__up__page__container {
         flex-direction: column;
+        min-height: auto;
+        gap: 0;
     }
 
     .sign__up__box {
@@ -46,18 +53,24 @@
 
     .logo__controlinfra__container {
         gap: 1.5rem;
+        padding: 0 2rem;
+        margin-bottom: 0;
     }
 
     .logo__feature__img {
-        margin-bottom: 0;
+        margin-bottom: 2rem;
+        padding: 1rem;
     }
 
     .left__sign__up__page {
         width: 100%;
+        min-height: auto;
+        padding: 2rem 0;
     }
 
     .right__sign__up__page {
         width: 100%;
+        padding-top: 0
     }
 
     .sign__in__box {
