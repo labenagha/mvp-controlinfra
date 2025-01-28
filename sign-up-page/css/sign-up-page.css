@@ -92,7 +92,7 @@ body {
         transparent 50%
     );
     background-size: 200% 100%;
-    animation: borderFlow 4s linear infinite;
+    animation: borderFlow 3s linear infinite;
 }
 
 .logo__feature__img::after {
@@ -129,17 +129,18 @@ body {
 
 .sign__up__box {
     display: flex;
-    gap: 3.8rem;
+    gap: 7rem;
     margin-top: 13.5rem;
 }
 
 .sign__up__btn1 {
     display: inline-block;
-    padding: 1.5rem;
+    padding: 1.1rem 1.5rem 1.5rem 1rem;
+    border-radius: 1000px;
     text-align: center;
     background-color: var(--tertiary-color);
-    border-radius: 1000px;
     box-shadow: var(--shadow-color);
+    transition: all 0.3s;
 }
 
 .sign__up__btn1:hover,
@@ -169,15 +170,14 @@ body {
 .sign__up__link1 {
     color: #000;
     text-decoration: none;
-    font-weight: 500;
-    line-height: 1.4;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    font-weight: 600;
     letter-spacing: -0.75px;
 }
 
 .sign__up__btn2 {
     display: inline-block;
-    padding: 1rem 2.5rem 1rem 2.5rem;
+    padding: 1rem 2.2rem 1rem 2.5rem;
     text-align: center;
     border-radius: 1000px;
     border: 1px solid #fff;
@@ -186,9 +186,8 @@ body {
 .sign__up__link2 {
     color: #fff;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 1.8;
     letter-spacing: -1px;
     border-color: #000;
 }
@@ -234,7 +233,7 @@ body {
 }
 
 .right__sign__up__page h1 {
-    letter-spacing: -0.5px;
+    letter-spacing: -0.75px;
     width: fit-content;
     max-width: 50rem;
     font-weight: 100;
@@ -245,23 +244,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3.5rem;
+    gap: 3rem;
     padding: 1rem;
     width: 100%;
     background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
 }
 
 .sign__up___icon {
-    width: 2.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
     object-fit: cover;
-    align-self: center;
 }
 
 .icon__text {
     color: #fff;
     font-size: var(--font-size-normal-meduim);
-    line-height: 1.5;
-    font-weight: 600;
+    line-height: 1.3;
+    font-weight: 500;
     letter-spacing: -1px;
 }
 
