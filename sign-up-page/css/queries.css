@@ -75,19 +75,6 @@
         letter-spacing: -1px;
         font-weight: 500;
         padding: 1rem;
-    }
-
-    .sign__in__box {
-        width: 100%;
-    }
-}
-
-@media (max-width: 360px) {
-    .right__sign__up__page h1 {
-        font-size: 2.2rem;
-        letter-spacing: -1px;
-        font-weight: 500;
-        padding: 1rem;
         max-width: 40rem;
     }
 
@@ -96,16 +83,16 @@
     }
 
     .logo__controlinfra__title__box {
-        gap: 4.8rem;
+        gap: 6.5rem;
     }
 
     .sign__in__box {
         width: 100%;
     }
+
 }
 
-
-@media (max-width: 270px) {
+@media (max-width: 370px) {
     .right__sign__up__page h1 {
         font-size: 2rem;
     }
@@ -115,6 +102,16 @@
     }
 
     .logo__controlinfra__title__box {
-        gap: 2rem;
+        gap: 4.5rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .right__sign__up__page h1 {
+        font-size: 2rem;
+    }
+
+    .logo__controlinfra__title__box {
+        gap: 3rem;
     }
 }
