@@ -130,6 +130,7 @@ body {
 .sign__up__box {
     display: flex;
     gap: 3.8rem;
+    margin-top: 13.5rem;
 }
 
 .sign__up__btn1 {

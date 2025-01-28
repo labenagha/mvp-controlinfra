@@ -103,3 +103,18 @@
         width: 100%;
     }
 }
+
+
+@media (max-width: 270px) {
+    .right__sign__up__page h1 {
+        font-size: 2rem;
+    }
+
+    .term__policy__link {
+        font-size: 0.8rem;
+    }
+
+    .logo__controlinfra__title__box {
+        gap: 2rem;
+    }
+}
