@@ -23,6 +23,7 @@ html {
     --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #191d28;
+    --success-color: #00ff00;
     --color-gradient: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
 }
 
@@ -40,8 +41,6 @@ nav {
     grid-row: 1;
     background: var(--primary-color);
     padding: 2rem;
-    position: sticky;
-    top: 0;
 }
 
 aside {
@@ -55,7 +54,6 @@ aside {
 main {
     grid-column: 2;
     grid-row: 2;
-    background-color: var(--background-light-color);
     padding: 2rem;
 }
 
@@ -65,14 +63,29 @@ footer {
     padding: 2rem;
 }
 
+.container {
+    width: 120rem;
+    margin: 0 auto;
+    padding: 0.8rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid--3--cols {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
 /*################# Nav #################*/
 .nav__container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 2rem;
-    height: 2rem;
-    padding: 1.5rem;
+    height: 1rem;
+    padding: 1rem;
 }
 
 .profile__box {
@@ -85,14 +98,15 @@ footer {
 }
 
 .profile__name__text {
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
     color: var(--white-color);
 }
 
 .profile__picture {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
 }
 
@@ -146,8 +160,8 @@ footer {
     border: 2px solid var(--primary-color);
     border-radius: 50%;
     animation: rotate 5s linear infinite;
-    border-top: 1px solid transparent;
-    border-left: 1px solid transparent;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
 }
 
 @keyframes rotate {
@@ -261,22 +275,131 @@ footer {
 }
 
 /*################# Main #################*/
-.top__section__container {
-    padding: 1rem;
-}
-
-.top__section__content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.top__section__content__header__text {
+.welcome__title {
     font-size: 3.2rem;
-    font-weight: 400;
+    color: var(--font-dark-color-2);
+    font-weight: 300;
 }
 
-.top__section__content__body__text {
-    font-size: 1.6rem;
+.welcome__text {
+    font-size: 1.4rem;
+    color: var(--font-dark-color);
     font-weight: 200;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.metric__card {
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3.5rem;
+    background: var(--color-gradient);
+}
+
+.metric__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.metric__card__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.metric__icon {
+    background: #009900;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric__icon.storage {
+    background: #8B5CF6;
+}
+
+.metric__icon.plans {
+    background: #009900;
+}
+
+.metric__icon img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.metric__title {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.metric__value {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.metric__trend {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.metric__trend.positive {
+    color: var(--success-color);
+}
+
+.metric__trend.negative {
+    color: var(--danger-color);
+}
+
+.trend__period {
+    color: var(--white-color);
+}
+
+.trend__value {
+    color: var(--success-color);
+}
+
+.activity__section {
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity__title {
+    font-size: 1.8rem;
+    color: var(--font-dark-color-2);
+    margin-bottom: 2rem;
+}
+
+.activity__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--background-light-color);
+}
+
+.activity__icon {
+    background: var(--background-light-color-2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.activity__text {
+    font-size: 1.4rem;
+    color: var(--font-dark-color);
 }

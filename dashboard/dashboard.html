@@ -190,43 +190,93 @@
     </aside>
 
     <main>
-        <section class="top__section">
-            <div class="top__section__container">
-                <div class="top__section__content">
-                    <div class="top__section__content__header">
-                        <h1 class="top__section__content__header__text">Welcome to Controlinfra</h1>
+        <section class="dashboard__container container">
+            <div class="welcome__section">
+                <h1 class="welcome__title">Welcome to Controlinfra</h1>
+
+                <p class="welcome__text">
+                    Controlinfra is a platform that helps you manage your infrastructure with ease by having control to your terraform plan artifacts
+                </p>
+            </div>
+
+            <div class="metrics__grid grid grid--2--cols">
+                <div class="metric__card">
+                    <div class="metric__card__header">
+                        <div class="metric__icon">
+                            <img
+                                src="./assets/icons/rocket-takeoff.svg"
+                                alt="Deployments"
+                            >
+                        </div>
+
+                        <h3 class="metric__title">Total Deployments</h3>
                     </div>
 
-                    <div class="top__section__content__body">
-                        <p class="top__section__content__body__text">
-                            Controlinfra is a platform that helps you manage your infrastructure with ease by having control to your terraform plan artifacts
-                        </p>
+                    <div class="metric__value">1,234</div>
+
+                    <div class="metric__trend positive">
+                        <span class="trend__value">+12%</span>
+
+                        <span class="trend__period">vs last month</span>
+                    </div>
+                </div>
+
+                <div class="metric__card">
+                    <div class="metric__card__header">
+                        <div class="metric__icon storage">
+                            <img
+                                src="./assets/icons/database-fill.svg"
+                                alt="Storage"
+                            >
+                        </div>
+
+                        <h3 class="metric__title">Terraform State Usage</h3>
+                    </div>
+
+                    <div class="metric__value">85%</div>
+
+                    <div class="metric__trend negative">
+                        <span class="trend__value">+2%</span>
+
+                        <span class="trend__period">vs last week</span>
+                    </div>
+                </div>
+
+                <div class="metric__card">
+                    <div class="metric__card__header">
+                        <div class="metric__icon plans">
+                            <img
+                                src="./assets/icons/diagram-2.svg"
+                                alt="Active Plans"
+                            >
+                        </div>
+
+                        <h3 class="metric__title">Healthy Terraform Artifacts</h3>
+                    </div>
+
+                    <div class="metric__value">42</div>
+
+                    <div class="metric__trend positive">
+                        <span class="trend__value">+5</span>
+
+                        <span class="trend__period">new this week</span>
                     </div>
                 </div>
             </div>
 
-            <div class="middle__activity__card">
-                <div class="middle__activity__card__container">
-                    <div class="middle__activity__card__content">
-                        <div class="middle__activity__card__content__header">
-                            <h2 class="middle__activity__card__content__header__text">Recent Activity</h2>
+            <div class="activity__section">
+                <h2 class="activity__title">Recent Activity</h2>
+
+                <div class="activity__list">
+                    <div class="activity__item">
+                        <div class="activity__icon">
+                            <img
+                                src="./assets/icons/clipboard2-data.svg"
+                                alt="Activity"
+                            >
                         </div>
 
-                        <div class="middle__activity__card__content__body">
-                            <div class="middle__activity__card__content__body__item">
-                                <div class="middle__activity__card__content__body__item__icon">
-                                    <img
-                                        src="./assets/icons/clipboard2-data.svg"
-                                        alt="Activity Icon"
-                                        class="activity__icon"
-                                    >
-                                </div>
-
-                                <div class="middle__activity__card__content__body__item__text">
-                                    <p class="activity__text">Deployed a new plan</p>
-                                </div>
-                            </div>
-                        </div>
+                        <p class="activity__text">Deployed a new plan</p>
                     </div>
                 </div>
             </div>
