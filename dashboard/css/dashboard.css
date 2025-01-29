@@ -30,7 +30,7 @@ html {
 body {
     font-family: 'Ubuntu', sans-serif;
     display: grid;
-    grid-template-columns: 200px calc(100% - 200px);
+    grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     overflow-x: hidden;
@@ -64,7 +64,7 @@ footer {
 }
 
 .container {
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 0.8rem;
 }
@@ -75,7 +75,7 @@ footer {
 }
 
 .grid--3--cols {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /*################# Nav #################*/
@@ -122,6 +122,26 @@ footer {
 .support__icon:active {
     cursor: pointer;
 }
+
+.support__text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--white-color);
+}
+
+.support__link {
+    text-decoration: underline;
+    color: var(--white-color);
+}
+
+/* .chat__icon:hover,
+.chat__icon:active,
+.chat__icon:hover,
+.chat__icon:active {
+    cursor: pointer;
+} */
+
 
 /*################# SideBar #################*/
 .side__container {
@@ -402,4 +422,12 @@ footer {
 .activity__text {
     font-size: 1.4rem;
     color: var(--font-dark-color);
+}
+
+.metrics-chart {
+    margin-top: 2rem;
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
