@@ -13,6 +13,11 @@
         href="./css/dashboard.css"
     ></link>
 
+    <link
+        rel="stylesheet"
+        href="./css/queries.css"
+    ></link>
+
     <title>
         Controlinfra | Dashboard User Home
     </title>
@@ -54,8 +59,10 @@
 
                 <div class="support__box">
                     <span class="support__text">
-                        <a class="support__link"
-                        href="#">Send Us Feedback</a>
+                        <a
+                            class="support__link"
+                            href="#"
+                        >Send Us Feedback</a>
 
                         <!-- <img
                             src="./assets/icons/chat-fill.svg"
@@ -63,6 +70,20 @@
                             class="chat__icon"
                         > -->
                     </span>
+                </div>
+
+                <div class="mobile-menu-btn">
+                    <img
+                        src="./assets/icons/three-dots.svg"
+                        alt="Menu"
+                        class="menu-icon"
+                    >
+
+                    <img
+                        src="./assets/icons/x-circle-fill.svg"
+                        alt="Close"
+                        class="close-icon"
+                    >
                 </div>
             </div>
         </header>
@@ -297,5 +318,27 @@
     </main>
 
     <footer></footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const sidebar = document.querySelector('aside');
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            document.body.appendChild(overlay);
+        
+            menuBtn.addEventListener('click', function() {
+                menuBtn.classList.toggle('active');
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+        
+            overlay.addEventListener('click', function() {
+                menuBtn.classList.remove('active');
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
