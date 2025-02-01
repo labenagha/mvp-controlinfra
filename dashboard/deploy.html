@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    ></meta>
+
+    <link
+        rel="stylesheet"
+        href="./css/metric.css"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        href="./css/queries.css"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        href="./css/deploy.css"
+    ></link>
+
+    <title>Deploy</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="deploy__container">
+            <div class="deploy__header">
+                <h1>Deployment Manager</h1>
+            </div>
+
+            <div class="deploy__actions">
+                <div class="upload__terraform__plan btn">
+                    <img
+                        src="./assets/icons/box-arrow-up-right.svg"
+                        alt="Upload Icon"
+                        class="upload__icon"
+                    >
+
+                    <span>Upload Plan</span>
+                </div>
+
+                <div class="settings__btn">
+                    <img
+                        src="./assets/icons/settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"
+                        alt="Settings Icon"
+                        class="gear__icon"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <hr class="dividing__line">
+    </header>
+
+    <aside>
+        <div class="side__container">
+            <div class="side__content__top">
+                <div class="logo__box">
+                    <img
+                        src="./assets/logo/Icon-Only-White.png"
+                        alt="Controlinfra Logo"
+                        class="logo"
+                    >
+                </div>
+
+                <div class="side__menu__items">
+                    <ul>
+                        <li class="side__list__item">
+                            <a href="./index.html">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/clipboard2-data.svg"
+                                >
+
+                                Metrics
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="./deploy.html">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/rocket-takeoff.svg"
+                                >
+
+                                Deploy
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/diagram-2.svg"
+                                >
+
+                                Artifacts
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/sourceforge.svg"
+                                >
+
+                                Variables
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/database-fill.svg"
+                                >
+
+                                State
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/exclamation-triangle-fill.svg"
+                                >
+
+                                Build Alerts
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/send-fill.svg"
+                                >
+
+                                Schedule
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img
+                                        class="dashboard__side__icon"
+                                        src="./assets/icons/card-list.svg"
+                                    >
+
+                                    Documentation
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="side__content__bottom">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img
+                                class="dashboard__side__icon"
+                                src="./assets/icons/gear.svg"
+                            >
+
+                            Settings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img
+                                class="dashboard__side__icon"
+                                src="./assets/icons/box-arrow-in-left.svg"
+                            >
+
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <div class="container margin-bottom">
+            <h1 class="deploy__activities">Deployments Activities</h1>
+
+            <div class="deployments-table">
+                <div class="table-header">
+                    <div class="header-cell">Environment</div>
+
+                    <div class="header-cell">Project</div>
+
+                    <div class="header-cell">Status</div>
+
+                    <div class="header-cell">Created At</div>
+
+                    <div class="header-cell">Last Deployment</div>
+
+                    <div class="header-cell">Created by</div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">
+                        <select class="environment-select">
+                            <option>Production</option>
+
+                            <option>Staging</option>
+                        </select>
+                    </div>
+
+                    <div class="cell">Core Payments - NodeJS</div>
+
+                    <div class="cell">
+                        <span class="status-badge waiting">Waiting for approval</span>
+                    </div>
+
+                    <div class="cell">Dec 13, 2021</div>
+
+                    <div class="cell">Dec 13, 2021</div>
+
+                    <div class="cell">
+                        <img
+                            src="./assets/image/1736132128334.jpg"
+                            alt="User avatar"
+                            class="user-avatar"
+                        >
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">
+                        <select class="environment-select">
+                            <option>Production</option>
+
+                            <option>Staging</option>
+                        </select>
+                    </div>
+
+                    <div class="cell">Mexico Central Testing</div>
+
+                    <div class="cell">
+                        <span class="status-badge failed">Failed</span>
+                    </div>
+
+                    <div class="cell">Dec 9, 2021</div>
+
+                    <div class="cell">Dec 9, 2021</div>
+
+                    <div class="cell">
+                        <img
+                            src="./assets/image/1736132128334.jpg"
+                            alt="User avatar"
+                            class="user-avatar"
+                        >
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">
+                        <select class="environment-select">
+                            <option>Production</option>
+
+                            <option>Staging</option>
+                        </select>
+                    </div>
+
+                    <div class="cell">Mexico Central Testing</div>
+
+                    <div class="cell">
+                        <span class="status-badge failed">Failed</span>
+                    </div>
+
+                    <div class="cell">Dec 9, 2021</div>
+
+                    <div class="cell">Dec 9, 2021</div>
+
+                    <div class="cell">
+                        <img
+                            src="./assets/image/1736132128334.jpg"
+                            alt="User avatar"
+                            class="user-avatar"
+                        >
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="cell">
+                        <select class="environment-select">
+                            <option>Production</option>
+
+                            <option>Staging</option>
+                        </select>
+                    </div>
+
+                    <div class="cell">Mexico Central Testing</div>
+
+                    <div class="cell">
+                        <span class="status-badge active">Passed</span>
+                    </div>
+
+                    <div class="cell">Dec 9, 2021</div>
+
+                    <div class="cell">Dec 9, 2021</div>
+
+                    <div class="cell">
+                        <img
+                            src="./assets/image/1736132128334.jpg"
+                            alt="User avatar"
+                            class="user-avatar"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="workflow-header">
+            <div class="step-indicator">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+
+                    <div class="step-label">Connect State</div>
+                </div>
+
+                <div class="step-line completed"></div>
+
+                <div class="step active">
+                    <div class="step-number">2</div>
+
+                    <div class="step-label">Review & Approve</div>
+                </div>
+
+                <div class="step-line"></div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+
+                    <div class="step-label">Apply</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plan-container container">
+            <div class="section-card">
+                <h2 class="section-title">Select State Backend</h2>
+
+                <div class="backend-options">
+                    <!-- AWS Option -->
+
+                    <button
+                        class="provider-card"
+                        onclick="showForm('aws')"
+                    >
+                        <div class="provider-icon">
+                            <img
+                                src="./assets/icons/Amazon_Web_Services-Logo.wine.svg"
+                                alt="AWS Icon"
+                                style="height: 30px; width: 30px;"
+                            >
+                        </div>
+
+                        <div class="provider-info">
+                            <span class="provider-name">AWS DynamoDB</span>
+
+                            <span class="provider-description">Connect using DynamoDB table</span>
+                        </div>
+
+                        <svg
+                            class="chevron-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Azure Option -->
+
+                    <button
+                        class="provider-card"
+                        onclick="showForm('azure')"
+                    >
+                        <div class="provider-icon">
+                            <img
+                                src="./assets/icons/azure-1.svg"
+                                alt="Azure Icon"
+                                style="height: 25px; width: 25px;"
+                            >
+                        </div>
+
+                        <div class="provider-info">
+                            <span class="provider-name">Azure Storage</span>
+
+                            <span class="provider-description">
+                                Connect using storage container
+                            </span>
+                        </div>
+
+                        <svg
+                            class="chevron-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                    </button>
+
+                    <!-- GCP Option -->
+
+                    <button
+                        class="provider-card"
+                        onclick="showForm('gcp')"
+                    >
+                        <div class="provider-icon">
+                            <img
+                                src="./assets/icons/google-cloud-platform-logo.svg"
+                                alt="GCP Icon"
+                                style="height: 30px; width: 30px;"
+                            >
+                        </div>
+
+                        <div class="provider-info">
+                            <span class="provider-name">GCP Storage</span>
+
+                            <span class="provider-description">Connect using cloud storage</span>
+                        </div>
+
+                        <svg
+                            class="chevron-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M9 18l6-6-6-6"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Forms - Initially Hidden -->
+
+                <div
+                    id="aws-form"
+                    class="connection-form"
+                    style="display: none;"
+                >
+                    <button
+                        class="back-button"
+                        onclick="hideForm()"
+                    >← Back to providers</button>
+
+                    <h2 class="form-title">Connect to AWS DynamoDB</h2>
+
+                    <form onsubmit="handleConnect('aws', event)">
+                        <div class="form-group">
+                            <label>Access Key ID</label>
+
+                            <input
+                                type="text"
+                                name="accessKeyId"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Secret Access Key</label>
+
+                            <input
+                                type="password"
+                                name="secretKey"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Region</label>
+
+                            <input
+                                type="text"
+                                name="region"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Table Name</label>
+
+                            <input
+                                type="text"
+                                name="tableName"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="submit-button"
+                        >Connect</button>
+                    </form>
+                </div>
+
+                <!-- Azure Form -->
+
+                <div
+                    id="azure-form"
+                    class="connection-form"
+                    style="display: none;"
+                >
+                    <button
+                        class="back-button"
+                        onclick="hideForm()"
+                    >← Back to providers</button>
+
+                    <h2 class="form-title">Connect to Azure Storage</h2>
+
+                    <form onsubmit="handleConnect('azure', event)">
+                        <div class="form-group">
+                            <label>Storage Account Name</label>
+
+                            <input
+                                type="text"
+                                name="storageAccountName"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Resource Group</label>
+
+                            <input
+                                type="text"
+                                name="resourceGroup"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Container Name</label>
+
+                            <input
+                                type="text"
+                                name="containerName"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Access Key</label>
+
+                            <input
+                                type="password"
+                                name="accessKey"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="submit-button"
+                        >Connect</button>
+                    </form>
+                </div>
+
+                <!-- GCP Form -->
+
+                <div
+                    id="gcp-form"
+                    class="connection-form"
+                    style="display: none;"
+                >
+                    <button
+                        class="back-button"
+                        onclick="hideForm()"
+                    >← Back to providers</button>
+
+                    <h2 class="form-title">Connect to GCP Storage</h2>
+
+                    <form onsubmit="handleConnect('gcp', event)">
+                        <div class="form-group">
+                            <label>Project ID</label>
+
+                            <input
+                                type="text"
+                                name="projectId"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Bucket Name</label>
+
+                            <input
+                                type="text"
+                                name="bucketName"
+                                required="required"
+                            ></input>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Service Account Key (JSON)</label>
+
+                            <textarea
+                                name="credentials"
+                                rows="6"
+                                class="form-textarea"
+                                required="required"
+                            ></textarea>
+
+                            <span class="form-help">
+                                Paste your service account key JSON here
+                            </span>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="submit-button"
+                        >Connect</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="next__arrow" id="nextButton">
+            <a href="#">Next</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            &copy; 2025 Controlinfra. All rights reserved
+        </p>
+    </footer>
+
+    <script src="./js/deploy.js"></script>
+</body>
+</html>

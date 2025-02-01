@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    ></meta>
+
+    <link
+        rel="stylesheet"
+        href="./css/metric.css"
+    ></link>
+
+    <link
+        rel="stylesheet"
+        href="./css/queries.css"
+    ></link>
+
+    <title>
+        Controlinfra | Dashboard User Home
+    </title>
+</head>
+
+<body>
+    <nav>
+        <header>
+            <div class="nav__container">
+                <div class="profile__box">
+                    <img
+                        src="./assets/image/1736132128334.jpg"
+                        alt="Profile Picture"
+                        class="profile__picture"
+                    >
+
+                    <figure class="profile__name">
+                        <figcaption>
+                            <span class="profile__name__text">Hi, Louis</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="notification__box">
+                    <img
+                        src="./assets/icons/bell.svg"
+                        alt="Notification Bell"
+                        class="notification__icon"
+                    >
+                </div>
+
+                <div class="support__box">
+                    <img
+                        src="./assets/icons/question-circle-fill.svg"
+                        alt="Support Icon"
+                        class="support__icon"
+                    >
+                </div>
+
+                <div class="support__box">
+                    <span class="support__text">
+                        <a
+                            class="support__link"
+                            href="#"
+                        >Send Us Feedback</a>
+
+                        <!-- <img
+                            src="./assets/icons/chat-fill.svg"
+                            alt="chat icon"
+                            class="chat__icon"
+                        > -->
+                    </span>
+                </div>
+
+                <div class="mobile-menu-btn">
+                    <img
+                        src="./assets/icons/three-dots.svg"
+                        alt="Menu"
+                        class="menu-icon"
+                    >
+
+                    <img
+                        src="./assets/icons/x-circle-fill.svg"
+                        alt="Close"
+                        class="close-icon"
+                    >
+                </div>
+            </div>
+        </header>
+    </nav>
+
+    <aside>
+        <div class="side__container">
+            <div class="side__content__top">
+                <div class="logo__box">
+                    <img
+                        src="./assets/logo/Icon-Only-White.png"
+                        alt="Controlinfra Logo"
+                        class="logo"
+                    >
+                </div>
+
+                <div class="side__menu__items">
+                    <ul>
+                        <li class="side__list__item">
+                            <a href="./index.html">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/clipboard2-data.svg"
+                                >
+
+                                Metrics
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="./deploy.html">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/rocket-takeoff.svg"
+                                >
+
+                                Deploy
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/diagram-2.svg"
+                                >
+
+                                Artifacts
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/sourceforge.svg"
+                                >
+
+                                Variables
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/database-fill.svg"
+                                >
+
+                                State
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/exclamation-triangle-fill.svg"
+                                >
+
+                                Build Alerts
+                            </a>
+                        </li>
+
+                        <li class="side__list__item">
+                            <a href="#">
+                                <img
+                                    class="dashboard__side__icon"
+                                    src="./assets/icons/send-fill.svg"
+                                >
+
+                                Schedule
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img
+                                        class="dashboard__side__icon"
+                                        src="./assets/icons/card-list.svg"
+                                    >
+
+                                    Documentation
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="side__content__bottom">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img
+                                class="dashboard__side__icon"
+                                src="./assets/icons/gear.svg"
+                            >
+
+                            Settings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img
+                                class="dashboard__side__icon"
+                                src="./assets/icons/box-arrow-in-left.svg"
+                            >
+
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <section class="dashboard__container container">
+            <div class="welcome__section">
+                <h1 class="welcome__title">Welcome to Controlinfra</h1>
+
+                <p class="welcome__text">
+                    Controlinfra is a platform that helps you manage your infrastructure with ease by having control to your terraform plan artifacts
+                </p>
+            </div>
+
+            <div class="metrics__grid grid grid--3--cols">
+                <div class="metric__card">
+                    <div class="metric__card__header">
+                        <div class="metric__icon">
+                            <img
+                                src="./assets/icons/rocket-takeoff.svg"
+                                alt="Deployments"
+                            >
+                        </div>
+
+                        <h3 class="metric__title">Total Deployments</h3>
+                    </div>
+
+                    <div class="metric__value">1,234</div>
+
+                    <div class="metric__trend positive">
+                        <span class="trend__value">+12%</span>
+
+                        <span class="trend__period">vs last month</span>
+                    </div>
+                </div>
+
+                <div class="metric__card">
+                    <div class="metric__card__header">
+                        <div class="metric__icon storage">
+                            <img
+                                src="./assets/icons/database-fill.svg"
+                                alt="Storage"
+                            >
+                        </div>
+
+                        <h3 class="metric__title">Terraform State Usage</h3>
+                    </div>
+
+                    <div class="metric__value">85%</div>
+
+                    <div class="metric__trend negative">
+                        <span class="trend__value">+2%</span>
+
+                        <span class="trend__period">vs last week</span>
+                    </div>
+                </div>
+
+                <div class="metric__card">
+                    <div class="metric__card__header">
+                        <div class="metric__icon plans">
+                            <img
+                                src="./assets/icons/diagram-2.svg"
+                                alt="Active Plans"
+                            >
+                        </div>
+
+                        <h3 class="metric__title">Healthy Terraform Artifacts</h3>
+                    </div>
+
+                    <div class="metric__value">42</div>
+
+                    <div class="metric__trend positive">
+                        <span class="trend__value">+5</span>
+
+                        <span class="trend__period">new this week</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="metrics-root"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            &copy; 2025 Controlinfra. All rights reserved
+        </p>
+    </footer>
+
+    <script
+        type="module"
+        src="/src/main.jsx"
+    ></script>
+</body>
+</html>

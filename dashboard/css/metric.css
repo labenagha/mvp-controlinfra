@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --primary-color: #52736d;
+    --secondary-color: #6c757d;
+    --background-dark-color: #404148;
+    --background-dark-grey: #191d28;
+    --border-color: #2e344e;
+    --background-light-color: #f1f1f1;
+    --background-light-color-2: #f9f9f9;
+    --white-color: #fff;
+    --font-light-color: #a4acc4;
+    --font-dark-color: #313131;
+    --font-dark-color-2: #151515;
+    --sidebar-dark-color: #191d28;
+    --success-color: #00ff00;
+    --color-gradient: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83));
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+nav {
+    grid-column: 2;
+    grid-row: 1;
+    background: var(--color-gradient);
+    padding: 2rem;
+}
+
+aside {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    background-color: var(--sidebar-dark-color);
+    min-height: 100vh;
+    color: var(--white-color);
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 2rem;
+}
+
+footer {
+    grid-column: 2;
+    grid-row: 3;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0.8rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid--3--cols {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/*################# Nav #################*/
+
+.nav__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    height: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.profile__box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.profile__name__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--white-color);
+}
+
+.profile__picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.notification__icon,
+.support__icon {
+    width: 15px;
+    height: 15px;
+}
+
+.notification__icon:hover,
+.notification__icon:active,
+.support__icon:hover,
+.support__icon:active {
+    cursor: pointer;
+}
+
+.support__text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--white-color);
+}
+
+.support__link {
+    text-decoration: underline;
+    color: var(--white-color);
+}
+
+/*################# SideBar #################*/
+.side__container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    width: 200px;
+}
+
+.logo__box {
+    padding: 3.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    object-fit: cover;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.logo__box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.side__content__top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.side__menu__items {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.side__menu__items > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.side__menu__items > ul > li {
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+.side__list__item:hover,
+.side__list__item:active {
+    background: var(--color-gradient);
+}
+
+.dashboard__side__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.side__menu__items > ul > li > a {
+    color: var(--white-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.side__menu__items > ul > li > a > span {
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.side__content__bottom {
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.side__content__bottom ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.side__content__bottom > ul > li {
+    list-style: none;
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+.side__content__bottom > ul > li > a {
+    text-decoration: none;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/*################# Menu Btn Styling #################*/
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.mobile-menu-btn img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.menu-icon {
+    display: block;
+}
+
+.close-icon {
+    display: none;
+}
+
+.mobile-menu-btn.active .menu-icon {
+    display: none;
+}
+
+.mobile-menu-btn.active .close-icon {
+    display: block;
+}
+
+
+/*################# Main #################*/
+.welcome__title {
+    font-size: 2.5rem;
+    color: var(--font-dark-color-2);
+    font-weight: 500;
+}
+
+.welcome__text {
+    font-size: 1.2rem;
+    color: var(--font-dark-color);
+    font-weight: 200;
+    margin-top: 0.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.metric__card {
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3.5rem;
+    background: var(--background-dark-color);
+}
+
+.metric__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.metric__card__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.metric__icon {
+    background: #009900;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric__icon.storage {
+    background: #8B5CF6;
+}
+
+.metric__icon.plans {
+    background: #009900;
+}
+
+.metric__icon img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.metric__title {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.metric__value {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.metric__trend {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.metric__trend.positive {
+    color: var(--success-color);
+}
+
+.metric__trend.negative {
+    color: var(--danger-color);
+}
+
+.trend__period {
+    color: var(--white-color);
+}
+
+.trend__value {
+    color: var(--success-color);
+}
+
+.activity__section {
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity__title {
+    font-size: 1.8rem;
+    color: var(--font-dark-color-2);
+    margin-bottom: 2rem;
+}
+
+.activity__item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--background-light-color);
+}
+
+.activity__icon {
+    background: var(--background-light-color-2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.activity__text {
+    font-size: 1.4rem;
+    color: var(--font-dark-color);
+}
+
+.metrics-chart {
+    margin-top: 2rem;
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay for when mobile menu is active */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-dark-color);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/*################# Footer #################*/
+.footer__text {
+    text-align: center;
+}
